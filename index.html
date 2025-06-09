@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Jon – Atlas Benefit Consulting</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f7f7f7; text-align: center; }
+    .form-container { max-width: 500px; margin: auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input[type="text"], input[type="email"] { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
+    button { background-color: #0073e6; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #005bb5; }
+    .logo { max-width: 200px; margin-bottom: 20px; }
+    h2 { color: #2e2e2e; }
+    p.intro { color: #555; font-size: 1.1em; }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <img src="atlas logo.png" alt="Atlas Benefit Consulting Logo" class="logo">
+  <h2>Let's Connect</h2>
+  <p class="intro">
+    <strong>Let’s Get You Squared Away.</strong><br><br>
+    Drop your name, number, and email below. Jon—a fellow vet—will reach out within 48 hours to help you get started with your VA disability benefits.
+  </p>
+  <form action="https://usebasin.com/f/09731eba3de8" method="POST" onsubmit="return showThankYou()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit">Submit</button>
+  </form>
+  <div id="thankyou" style="display:none; margin-top: 20px; font-weight: bold; color: green;">
+    Thanks! Jon will be contacting you within 48 hours!
+  </div>
+</div>
+
+<script>
+  function showThankYou() {
+    document.querySelector('form').style.display = 'none';
+    document.getElementById('thankyou').style.display = 'block';
+    return true;
+  }
+</script>
+
+</body>
+</html>
 
